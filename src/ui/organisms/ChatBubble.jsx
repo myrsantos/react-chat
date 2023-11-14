@@ -9,6 +9,7 @@ export const ChatBubble = ({ self = false }) => (
       mx: 'auto',
       p: 2,
     }}
+    style={{marginRight: self ? 0 : 100, marginLeft: !self ? 0 : 100,}}
   >
     <Grid
       container

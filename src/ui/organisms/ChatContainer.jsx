@@ -6,12 +6,12 @@ export const ChatContainer = () => (
   <>
     <div
       style={{
-        maxHeight: 'calc(100vh - 170px)',
-        margin: '20px 0',
+        maxHeight: 'calc(100vh - 280px)',
+        margin: '40px 0',
         overflow: 'auto',
       }}
     >
-      <Stack spacing={2}>
+      <Stack spacing={4}>
         <ChatBubble></ChatBubble>
         <ChatBubble></ChatBubble>
         <ChatBubble></ChatBubble>
