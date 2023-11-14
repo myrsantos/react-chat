@@ -2,7 +2,7 @@ import Stack from '@mui/material/Stack';
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 
-export const TextMessage = ({self}) => (
+export const TextMessage = ({self = false}) => (
   <Stack>
     <Grid container justifyContent="space-around">
       <Grid item textAlign="left" xs="8">

@@ -2,7 +2,7 @@ import Grid from '@mui/material/Grid';
 import {TextMessage} from '../molecules/TextMessage';
 import { Avatar, Paper } from '@mui/material';
 
-export const ChatBubble = ({self}) => (
+export const ChatBubble = ({self = false}) => (
   <Paper
     sx={{
       my: 1,
@@ -15,7 +15,7 @@ export const ChatBubble = ({self}) => (
         {!self && <Avatar>W</Avatar>}
       </Grid>
       <Grid item xs>
-      <TextMessage self/>
+      <TextMessage self={self}/>
 
       </Grid>
     </Grid>
