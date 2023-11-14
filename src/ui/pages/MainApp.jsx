@@ -9,14 +9,14 @@ export const MainApp = () => {
   const [SelfExist, setSelfExist] = useState(false)
 
   useEffect(() => {
-    setSelfExist(!!getSelfFromStorage().id);
-    window.addEventListener(SELF_DATA, (val) => {setSelfExist(!!val.target.localStorage[SELF_DATA].id);}, false);
+    setSelfExist(!!(getSelfFromStorage().id));
+    window.addEventListener(SELF_DATA, (val) => {setSelfExist(!!(getSelfFromStorage().id))}, false);
   }, []);
 
   return (
     <Container maxWidth="sm">
       <Typography variant="h4" textAlign="left" marginTop={4}>
-        {!!getGroupNameFromStorage() ? `${getGroupNameFromStorage()} Group Chat!` : ''}!
+        {!!getGroupNameFromStorage() ? `${getGroupNameFromStorage()} Group Chat!` : ''}
       </Typography>
       {SelfExist ? <ChatContainer/>: <LoginChat />}
     </Container>

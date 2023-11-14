@@ -12,7 +12,7 @@ export const LoginChat = () => {
 
     useEffect(() => {
       setGCExist(!!getGroupNameFromStorage());
-      window.addEventListener(GROUP_NAME, (val) => {setGCExist(!!val.target.localStorage[GROUP_NAME]);}, false);
+      window.addEventListener(GROUP_NAME, (val) => {setGCExist(!!getGroupNameFromStorage())}, false);
     }, []);
 
   const login = () => {

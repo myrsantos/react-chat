@@ -2,7 +2,7 @@ import Grid from '@mui/material/Grid';
 import { TextMessage } from '../molecules/TextMessage';
 import { Avatar, Paper } from '@mui/material';
 
-export const ChatBubble = ({ self = false }) => (
+export const ChatBubble = ({ self = false, chat }) => (
   <Paper
     sx={{
       my: 1,
@@ -17,9 +17,9 @@ export const ChatBubble = ({ self = false }) => (
       spacing={2}
       direction={self ? 'row-reverse' : 'row'}
     >
-      <Grid item>{!self && <Avatar>W</Avatar>}</Grid>
+      <Grid item>{!self && <Avatar>{chat.name}</Avatar>}</Grid>
       <Grid item xs>
-        <TextMessage self={self} />
+        <TextMessage self={self} chat={chat}/>
       </Grid>
     </Grid>
   </Paper>

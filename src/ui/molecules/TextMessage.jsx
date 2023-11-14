@@ -1,20 +1,21 @@
 import Stack from '@mui/material/Stack';
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
+import moment from "moment";
 
-export const TextMessage = ({ self = false }) => (
+export const TextMessage = ({ self = false, chat }) => (
   <Stack>
     <Grid container justifyContent="space-around">
       <Grid item textAlign="left" xs>
         {!self && (
           <Typography variant="overline" display="block">
-            Name
+            {chat.name}
           </Typography>
         )}
       </Grid>
       <Grid item textAlign="right" xs="auto">
         <Typography variant="overline" display="block">
-          1 Nov 2023 10:12 PM
+        {moment(chat.time).format('MMMM Do YYYY, h:mm:ss a')}
         </Typography>
       </Grid>
     </Grid>
